@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathguard"
+version = "1.0.0"
+description = "Analyze archive-style or user-supplied paths for traversal, absolute-path, reserved-name, and normalization risks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "PathGuard contributors"}]
+
+[project.scripts]
+path-guard = "path_guard.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/PathGuard"
+Issues = "https://github.com/bafnayeygian/PathGuard/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
